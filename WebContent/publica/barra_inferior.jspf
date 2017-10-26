@@ -1,0 +1,19 @@
+  <style>
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 12px;
+    }
+  </style>
+
+  
+<footer class="container-fluid text-left">
+  <p>AGROFRUTAS Avenida das nações, nº 1115, Centro, Petrolina-PE. Telefone: 87 3864-9090</p>
+</footer>
+
+	<script>
+	$('#countdown-1').timeTo(60, function(){
+	alert('Sessão Expirou!');
+	});
+	</script>
