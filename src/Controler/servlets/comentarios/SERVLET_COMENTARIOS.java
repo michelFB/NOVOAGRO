@@ -1,3 +1,4 @@
+package Controler.servlets.comentarios;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -6,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import projeto.FormWriter;
+import Repository.AcessoArquivo;
 
 
 
@@ -24,8 +25,8 @@ public class SERVLET_COMENTARIOS extends HttpServlet {
 		conteudo = conteudo.replaceAll("<script>", "").replaceAll("</script>", "");		
 		conteudo = conteudo.replaceAll("<", "").replaceAll(">", "").replaceAll("html", "");		
 		
-		FormWriter.writeOnFile(conteudo);
-		String valor = FormWriter.readOnFile();
+		AcessoArquivo.EscreverArquivo(conteudo);
+		String valor = AcessoArquivo.LerArquivo();
 		//retornando atributo para página pública
 		request.setAttribute("conteudo",valor );
         // Chama pagina de resposta

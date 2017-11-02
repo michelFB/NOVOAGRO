@@ -1,7 +1,7 @@
 <%@ include file="verificaSessao.jsp" %>
 <%if(!("1".equals(session.getAttribute("tipo")))&&!("2".equals(session.getAttribute("tipo"))))
 {%><jsp:forward page="sair.jsp"/><%}else{ %>
-<%@ page import="projeto.PRODUTODAO" import="projeto.PRODUTOMODEL" %> 
+<%@ page import="Dao.PRODUTODAO" import="Model.PRODUTOMODEL" %> 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"  pageEncoding="ISO-8859-1"%>
  <% String msg = null;
  if(request.getParameter("IDproduto")==null)

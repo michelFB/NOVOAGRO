@@ -1,4 +1,4 @@
-package projeto;
+package Repository;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -11,12 +11,12 @@ import java.io.PrintWriter;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class FormWriter {
+public class AcessoArquivo {
 
 	//Caminho do arquivo
 		private static final String path = "c:/Users/michel/workspace2/NOVOAGRO-seguro/WebContent/novo/arquivo.txt";
 		//Método que escreve no arquivo
-		public static void writeOnFile(String value) {
+		public static void EscreverArquivo(String value) {
 			if (value == ""){ 
 			}else{
 				BufferedWriter bw = null;
@@ -32,7 +32,7 @@ public class FormWriter {
 				}
 			}
 		}
-		public static String readOnFile() throws IOException { 
+		public static String LerArquivo() throws IOException { 
 			String linha = "";
 			BufferedReader br = new BufferedReader(new FileReader(path));
 			while(br.ready()){
@@ -40,8 +40,6 @@ public class FormWriter {
 			}
 			br.close();
 			return linha;
-		
-
 		}
 		
 		public static String getHash(String o)

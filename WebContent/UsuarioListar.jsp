@@ -1,9 +1,9 @@
 <%@ include file="verificaSessao.jsp" %>
 <%if(!("1".equals(session.getAttribute("tipo")))){%><jsp:forward page="sair.jsp"/><%}else{ %>
-<%@ page import="projeto.USUARIODAO" import="projeto.USUARIOMODEL"  import="java.util.List"%> 
+<%@ page import="Dao.USUARIODAO" import="Model.USUARIOMODEL"  import="java.util.List"%> 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"  pageEncoding="ISO-8859-1" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<jsp:useBean id="dao" class="projeto.USUARIODAO"/>
+<jsp:useBean id="dao" class="Dao.USUARIODAO"/>
 
  <%	 String  mensagem  = (String)  request.getAttribute("msg"); // vem do servlet altera
  	 USUARIODAO USdao = new USUARIODAO();

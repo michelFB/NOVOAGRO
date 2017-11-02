@@ -1,8 +1,8 @@
 <%@ include file="verificaSessao.jsp" %>
-<%@ page import="projeto.PRODUTODAO" import="projeto.PRODUTOMODEL" %> 
+<%@ page import="Dao.PRODUTODAO" import="Model.PRODUTOMODEL" %> 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"  pageEncoding="ISO-8859-1" import="java.util.List"%>
- <%  PRODUTODAO dao = new PRODUTODAO();
-	 List<PRODUTOMODEL> lista;
+ <%  Dao.PRODUTODAO dao = new Dao.PRODUTODAO();
+	 List<Model.PRODUTOMODEL> lista;
 	 lista = dao.getLista();
   %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -17,7 +17,7 @@
 	      <h4><label class="label label-info"> <%if(request.getAttribute("msg")==null){}else{out.println(request.getAttribute("msg"));}%></label></h4>	<br />
 		   	<br/> 
 		   	
-		   	<%	for(PRODUTOMODEL registro: lista){ %>
+		   	<%	for(Model.PRODUTOMODEL registro: lista){ %>
 			   	<table class="table-bordered" border="2" align="left" >
 					<tr >	<th colspan="3" style="width: 100px; height: 100px" align="center"><%=registro.getImagem()%></th></tr>
 					<tr>	<td style="width: 100px;">Código</td>		<td  style="width: 250px;" align="center"><%=registro.getCodigo()%></td></tr>				

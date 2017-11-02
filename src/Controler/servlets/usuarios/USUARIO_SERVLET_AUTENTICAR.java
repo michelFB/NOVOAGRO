@@ -1,3 +1,4 @@
+package Controler.servlets.usuarios;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -6,9 +7,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import projeto.FormWriter;
-import projeto.USUARIODAO;
-import projeto.USUARIOMODEL;
+
+import Dao.USUARIODAO;
+import Model.USUARIOMODEL;
+import Repository.AcessoArquivo;
 
 
 @WebServlet("/autenticacao")
@@ -59,7 +61,7 @@ public class USUARIO_SERVLET_AUTENTICAR extends HttpServlet {
     		if(session.isNew())
     		{
     			String HASH;
-        		HASH = FormWriter.getHash(usuario1.getNome());  
+        		HASH = AcessoArquivo.getHash(usuario1.getNome());  
     			session.setAttribute("contAcessos", HASH);
     			session.setAttribute("tipo", usuario1.getTipo());
     			session.setAttribute("nome", usuario1.getNome());

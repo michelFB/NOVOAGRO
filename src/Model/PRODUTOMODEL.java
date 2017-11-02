@@ -1,4 +1,4 @@
-package projeto;
+package Model;
 
 
 public class PRODUTOMODEL{

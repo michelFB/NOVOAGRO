@@ -1,12 +1,12 @@
 <%@ include file="verificaSessao.jsp" %>
 <%if(!("1".equals(session.getAttribute("tipo")))){%><jsp:forward page="sair.jsp"/><%}else{ %>
-<%@ page import="projeto.USUARIODAO" import="projeto.USUARIOMODEL" %> 
+<%@ page import="Dao.USUARIODAO" import="Model.USUARIOMODEL" %> 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"  pageEncoding="ISO-8859-1"%>
  <% String msg = null;
  if(request.getParameter("IDusuario")==null)
  {	 msg = "Registro não encontrado"; }else
- {	 USUARIOMODEL usuario = new USUARIOMODEL();
-	 USUARIODAO dao = new USUARIODAO();
+ {	 Model.USUARIOMODEL usuario = new Model.USUARIOMODEL();
+	 Dao.USUARIODAO dao = new Dao.USUARIODAO();
 	 usuario.setIDusuario(request.getParameter("IDusuario"));
  	 boolean ret = dao.apaga(usuario);
  	 if(ret==true){

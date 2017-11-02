@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>   
 <%@ page import="java.io.*" %>
-<%@ page import="projeto.FormWriter" %>
+<%@ page import="Repository.AcessoArquivo" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -23,7 +23,7 @@
                         	</div>
                         </div>
  				</form>
-       <%String conteudo =  FormWriter.readOnFile(); out.print(conteudo);%> 
+       <%String conteudo =  Repository.AcessoArquivo.LerArquivo(); out.print(conteudo);%> 
     </div>
     <div class="col-sm-7 text-left"> 
       <h1>NOVOAGRO WEB - Facilitando a vida do homem do campo.</h1>  

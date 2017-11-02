@@ -1,3 +1,4 @@
+package Controler.servlets.produtos;
 import java.io.IOException;
 
 
@@ -6,8 +7,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import projeto.PRODUTODAO;
-import projeto.PRODUTOMODEL;
+
+import Dao.PRODUTODAO;
+import Model.PRODUTOMODEL;
 
 @WebServlet("/alteraProduto")
 public class PRODUTO_SERVLET_ALTERAR extends HttpServlet {
