@@ -14,7 +14,7 @@ import java.security.NoSuchAlgorithmException;
 public class AcessoArquivo {
 
 	//Caminho do arquivo
-		private static final String path = "c:/Users/michel/workspace2/NOVOAGRO-seguro/WebContent/novo/arquivo.txt";
+		private static final String path = "c:/Users/michel/workspace/NOVOAGRO-seguro/WebContent/novo/arquivo.txt";
 		//Método que escreve no arquivo
 		public static void EscreverArquivo(String value) {
 			if (value == ""){ 
